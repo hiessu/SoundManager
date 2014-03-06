@@ -292,7 +292,7 @@ NSString *const SoundDidFinishPlayingNotification = @"SoundDidFinishPlayingNotif
     self.timer = nil;
     
     //fire events
-    if (_completionHandler) _completionHandler(NO);
+    if (_completionHandler) _completionHandler(YES);
     [[NSNotificationCenter defaultCenter] postNotificationName:SoundDidFinishPlayingNotification object:self];
     
     //set to nil on next runloop update so sound is not released unexpectedly
